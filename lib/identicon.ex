@@ -10,14 +10,6 @@ defmodule Identicon do
     |> save_image(input)
   end
 
-  @spec save_image(
-          binary
-          | maybe_improper_list(
-              binary | maybe_improper_list(any, binary | []) | byte,
-              binary | []
-            ),
-          any
-        ) :: :ok | {:error, atom}
   def save_image(image, path) do
     File.write("#{path}.png", image)
   end
