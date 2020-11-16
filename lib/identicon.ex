@@ -11,7 +11,7 @@ defmodule Identicon do
   end
 
   def save_image(image, path) do
-    File.write("#{path}.png", image)
+    File.write("data/#{path}.png", image)
   end
 
   def draw_image(%Identicon.Image{color: color, pixel_map: pixel_map}) do
